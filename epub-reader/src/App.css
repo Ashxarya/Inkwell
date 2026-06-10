@@ -1,0 +1,37 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-deep);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.reader-area {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --bg-deep:    #f5f0e8;
+  --bg-surface: #ede7d9;
+  --bg-panel:   #e8e0cf;
+  --text-main:  #2c2c3a;
+  --text-muted: #6b6880;
+  --border:     #d0c8b8;
+}
+
+[data-theme="sepia"] {
+  --bg-deep:    #f4ead2;
+  --bg-surface: #ede0c0;
+  --bg-panel:   #e6d8b0;
+  --text-main:  #3b2f1e;
+  --text-muted: #7a6650;
+  --border:     #c9b990;
+}

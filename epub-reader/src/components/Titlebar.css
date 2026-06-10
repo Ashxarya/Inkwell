@@ -1,0 +1,125 @@
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px;
+  padding: 0 12px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  -webkit-app-region: drag;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.titlebar-left,
+.titlebar-center,
+.titlebar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-center { flex: 1; justify-content: center; }
+
+.app-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  font-family: system-ui, sans-serif;
+}
+
+.book-title {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: system-ui, sans-serif;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tb-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-main);
+  font-size: 12px;
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tb-btn:hover {
+  background: var(--border);
+  color: var(--accent-soft);
+}
+
+.tb-btn.icon-only { padding: 5px 8px; }
+
+/* Settings panel */
+.settings-wrap { position: relative; }
+
+.settings-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 230px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  font-family: system-ui, sans-serif;
+  z-index: 200;
+}
+
+.settings-panel h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+}
+
+.settings-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.settings-panel input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.theme-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.theme-btn {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  font-size: 11px;
+  cursor: pointer;
+  font-family: system-ui, sans-serif;
+  transition: border-color 0.15s;
+}
+
+.theme-btn.active { border-color: var(--accent); }
+
+.theme-dark  { background: #1a1a2e; color: #e8e8f0; }
+.theme-light { background: #f5f0e8; color: #2c2c3a; }
+.theme-sepia { background: #f4ead2; color: #3b2f1e; }
